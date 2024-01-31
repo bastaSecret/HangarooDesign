@@ -13,17 +13,17 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(149, 215, 223);
+    background: rgb(161, 226, 233);
 }
 
 .container {
     width: 850px;
-    background: rgb(227, 231, 199);
+    background: rgb(230, 231, 217);
     display: flex;
-    gap: 70px;
+    gap: 40px;
     align-items: flex-end;
   
-    padding: 60px 40px;
+    padding: 70px 40px;
     border-radius: 10px;
 }
 
@@ -44,6 +44,7 @@ body {
     list-style: none;
     align-items: center;
     justify-content: center;
+    
 }
 
 .word-display .letter {
@@ -79,7 +80,7 @@ body {
 .game-box .keyboard {
     display: flex;
     gap: 5px;
-    margin-top: 40px;
+    margin-top: 25px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -96,6 +97,7 @@ body {
     border-radius: 4px;
     text-transform: uppercase;
     width: calc(100% 9 - 5px);
+   
 }
 
 .keyboard button:hover {
@@ -159,3 +161,34 @@ body {
     margin: 0 auto;
 }
 
+.difficulty-buttons {
+    margin-top: 10px; 
+    display: block; 
+    text-align: center; 
+    justify-content: center;
+    
+}
+
+.difficulty-buttons button {
+    padding: 12px 30px; 
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    padding: 7px;
+    border: none;
+    background: rgb(158, 217, 230);
+    border-radius: 4px;
+    text-transform: uppercase;
+    width: calc(100% 9 - 5px);
+}
+
+.difficulty-buttons h3 {
+    font-size: 1rem;
+}
+
+.difficulty-buttons button:hover {
+    background: rgb(64, 192, 208);
+    
+}
