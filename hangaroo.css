@@ -192,3 +192,11 @@ body {
     background: rgb(64, 192, 208);
     
 }
+
+ul {
+    list-style-type: none;
+  }
+  
+  .no-bullets {
+    list-style-type: none;
+  }
