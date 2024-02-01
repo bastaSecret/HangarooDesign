@@ -41,7 +41,7 @@
             { question: "Which element has the highest melting point??", answer: "Tungsten" },
             { question: "Who was the first woman to win a Nobel Prize and remains the only person to win Nobel Prizes in two different scientific fields?", answer: "Marie Curie" }
         ];
-
+        
         // Combined array of all questions
         const allQuestions = { easy: [...easyQuestions], medium: [...mediumQuestions], hard: [...hardQuestions] };
 
@@ -55,7 +55,7 @@
                 [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
             }
         }
-
+        
         function nextQuestion() {
             if (shuffledQuestions.length === 0) {
                 alert("No more questions. Click 'Next Question' to shuffle and start again.");
@@ -72,6 +72,7 @@
             document.getElementById("user-answer").value = '';
         }
 
+        //checking the answer of user
         function checkEnter(event) {
             if (event.key === "Enter") {
                 checkAnswer();
@@ -89,6 +90,7 @@
             }
         }
 
+        //setting the difficulty
         let currentDifficulty = 'easy'; // Default difficulty
         function selectDifficulty(difficulty) {
             currentDifficulty = difficulty;
@@ -101,3 +103,22 @@
             shuffleQuestions(currentDifficulty);
             nextQuestion(); // Display the first question
         });
+
+        //hints in vowels, if vowels are present it will print the vowels that are present inside of the word 
+        function isVowel(char) {
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+      
+            // Convert the character to lowercase for case-insensitive comparison
+            const lowercaseChar = char.toLowerCase();
+      
+            return vowels.includes(lowercaseChar);
+          }
+      
+          function getVowels(guessedLetters) {
+            return guessedLetters.filter(isVowel);
+          }
+      
+          // Example usage
+          const vowelsInWord = getVowels(guessedLetters);
+      
+          console.log(`${vowelsInWord}`);
