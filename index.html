@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangaroo Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hangaroo.css">
    
 </head>
 <body>
@@ -31,14 +31,20 @@
                 <li class="letter"></li>
                 <li class="letter"></li>
             </ul>
-            <h4 class="hint-text">
-                Hint:
-                <b>Minsan malambot minsan matigas, madalas malibag.</b>
-            </h4>
-            <h4 class="guesses-text">
+
+            <!-- display of questions -->
+            <center><ul id="questionsList" style="padding: 15px; font-size: 20px; font-weight: bold;">
+                <!-- Questions will be added dynamically using JavaScript -->
+            </ul>
+            <input type="text" id="user-answer" placeholder="Type your answer here" onkeydown="checkEnter(event)">
+
+            <!-- number of guesses -->
+            <h5 class="guesses-text" style="padding: 10px;">
                 Incorrect guesses:
                 <b class="guesses-count">0 / 3</b>
-            </h4>
+            </h4></center>
+
+            <!-- keyboard -->
             <div class="keyboard">
                 <button>a</button> <button>b</button> <button>c</button> <button>d</button>
                 <button>e</button> <button>f</button> <button>g</button> <button>h</button>
@@ -48,14 +54,25 @@
                 <button>u</button> <button>v</button> <button>w</button> <button>x</button>
                 <button>y</button> <button>z</button> 
             </div>
+
+            <!-- difficulty buttons -->
             <div class="difficulty-buttons">
                 <h3>Choose Difficulty</h3>
-                <button class="difficulty-button" id="easy">Easy</button>
-                <button class="difficulty-button" id="medium">Medium</button>
-                <button class="difficulty-button" id="difficult">Difficult</button>
-            </div>        
+                <button class="difficulty-button" onclick="selectDifficulty('easy')">Easy</button>
+                <button class="difficulty-button" onclick="selectDifficulty('medium')">Medium</button>
+                <button class="difficulty-button" onclick="selectDifficulty('hard')">Hard</button>
+            </div>
+
+            <!--button for hint-->
+            <div class="difficulty-buttons">
+                <h4>Hints</h4>
+                <button class="difficulty-buttons" onclick="isVowel()">Vowels</button>
+                
+            </div>
         </div>
     </div>
-    
+
+    <script src="hangaroo.js" defer></script>
+
 </body>
 </html>
