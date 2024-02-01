@@ -1,5 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 * {
     margin: 0;
@@ -192,3 +192,11 @@ body {
     background: rgb(64, 192, 208);
     
 }
+
+ul {
+    list-style-type: none;
+  }
+  
+  .no-bullets {
+    list-style-type: none;
+  }
