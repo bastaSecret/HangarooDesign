@@ -1,194 +1,174 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour:SCAN@-31&display=swap');
 
 body {
+    background-color: #4F646F;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: Sixtyfour;
+    color: #1f1c1c; /*kulay ng text*/
+    margin-top: 150px; /*margin sa taas para bumaba ung text*/
+} /*sa title lang to, wag gamitin sa iba */
+
+.right-box {
+    height: 710px;
+    width: 700px;
+    /*para magcenter ung laman ng container*/
+    text-align: center;
+    align-items: center;
+    background-color: #d7ceeb; /*kulay ng background ng container*/
+    float: right;
+}
+
+.right-box button {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center; /*position ng text sa loob ng button*/
+    color: #F4FAFF; /*kulay ng font nung button*/
+    background-color: #535657; /*kulay nung background ng button*/
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.left-box {
+    height: 710px;
+    width: 700px;
+    /*para magcenter ung laman ng container*/
+    text-align: center;
+    align-items: center;
+    float: left;
+}
+
+.popup {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #d7ceeb;
+    visibility: hidden;
+    border-color: none;
+}
+
+.open-popup {
+    visibility: visible;
+}
+
+.popup h2 {
+    font-size: 27px;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    /*button dun sa may rules pop up bago mag laro*/
+    height: 40px;
+    width: 60px;
+    font-size: 15px;
+    text-align: center; /*position ng text sa loob ng button*/
+    color: #F4FAFF; /*kulay ng font nung button*/
+    background-color: #535657; /*kulay nung background ng button*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/*css para sa index or main page*/
+
+.main-left { 
+    height: 710px;
+    width: 700px;
+    /*para magcenter ung laman ng container*/
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    float: left; 
+
+}
+
+.main-left h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: Sixtyfour;
+    color: #F4FAFF;
+}
+
+.main-left h3{
+    font-size: 25px;
+    font-style: bold;
+    color: #F4FAFF;
+}
+
+.main-center {
+    height: 710px;
+    width:  700px;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(161, 226, 233);
+    float: left; 
+    background-color: rgba(245, 245, 220, 0.822); /*sample lang muna to para makita, delete after*/
 }
 
-.container {
-    width: 850px;
-    background: rgb(230, 231, 217);
-    display: flex;
-    gap: 40px;
-    align-items: flex-end;
-  
-    padding: 70px 40px;
-    border-radius: 10px;
-}
-
-.hangaroo-box img{
-    max-width: 100%;
+.content{
     height: auto;
-}
-.hangaroo-box {
-    max-width: 270px;
-    margin-top: 20px;
+    width: 700;
+    top: 50%;
+    left: 50%;
     text-align: center;
-    text-transform: uppercase;
+    font-size: 40px;
 }
 
-.word-display {
+.user-input{
     display: flex;
-    gap: 10px;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.word-display .letter {
-    width: 28px;
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    border-bottom: 3px solid #000;
-}
-
-.word-display .letter.guessed {
-    border-color: transparent;
-    margin: -40px 0 35px;
-}
-
-.game-box h4 {
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.game-box h4 b {
-    font-weight: 600;
-}
-
-.game-box .guesses-text .guesses-count {
-    color: rgb(237, 71, 71);
-}
-
-.game-box .keyboard {
-    display: flex;
-    gap: 5px;
-    margin-top: 25px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.keyboard button {
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    outline: none;
-    padding: 7px;
-    border: none;
-    background: rgb(158, 217, 230);
-    border-radius: 4px;
-    text-transform: uppercase;
-    width: calc(100% 9 - 5px);
-   
+.user-input input {
+    width: 30px;
+    height: 35px;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
 }
 
-.keyboard button:hover {
-    background: rgb(64, 192, 208)
+.user-input button {
+    width: 50px;
+    height: 35px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: #e6e31d; /*background color ng button*/
 }
 
-.game-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.6);
+.details {
+    font-size: 20px;
 }
 
-.game-modal .content {
-    background: #f7b7b7;
-    max-width: 400px;
-    width: 100%;
-    text-align: 10px;
-    padding: 60px;
-    padding-bottom: 40px;
-    padding-top: 40px;
-}
-.game-modal img {
-    max-width: 100%;
-    height: 380;
-    margin-bottom: 20px;
+.details button {
+    height: 45px;
+    width: 300px;
+    font-size: 17px;
+    font-style: bold;
 }
 
-.game-modal h4 {
-    font-size: 1.53rem;
-    align-items: center;
-    justify-content: center;
-    padding-left: 83px;
-}
-
-.game-modal p {
-    font-size: 1.15rem;
-    margin: 15px 0 30px;
-    font-weight: 500;
-    padding-left: 18px;
-}
-
-
-.game-modal p b {
-    color: rgb(94, 109, 240);
-    font-weight: 600;
-    align-items: center;
-    justify-content: center;
-}
-
-.game-modal button {
-    padding: 12px 23px;
-    align-items: center;
-    justify-content: center;
+.keyboard {
     display: flex;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
 }
 
-.difficulty-buttons {
-    margin-top: 10px; 
-    display: block; 
-    text-align: center; 
-    justify-content: center;
-    
-}
-
-.difficulty-buttons button {
-    padding: 12px 30px; 
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    outline: none;
-    padding: 7px;
-    border: none;
-    background: rgb(158, 217, 230);
-    border-radius: 4px;
-    text-transform: uppercase;
-    width: calc(100% 9 - 5px);
-}
-
-.difficulty-buttons h3 {
-    font-size: 1rem;
-}
-
-.difficulty-buttons button:hover {
-    background: rgb(64, 192, 208);
-    
+.keyboard button {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin: 2px;
+    text-align: center;
+    background-color: #B7ADCF;
 }
