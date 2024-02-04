@@ -1,78 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangaroo Game</title>
-    <link rel="stylesheet" href="hangaroo.css">
-   
-</head>
-<body>
-    <div class="game-modal">
-        <div class="content">
-            <img src="gege/pic-lost.jpg" alt="gif">
-            <h4>Bubu amp</h4>
-            <p>The correct answer was: <b>Tite</b></p>
-            <button class="play-again">Play Again</button>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guess it Right!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="main-left">
+
+            <h2>Guess it Right!</h2>
+            <h3>Points: 30</h3>
+            <!--insert image for hangman-->
+
         </div>
-    </div>
-    <div class="container">
-        <div class="hangaroo-box">
-            <img src="gege/pic-0.png" alt="poste-img">
-            <h1>Hangaroo</h1>
-        </div>
-        <div class="game-box">
-            <ul class="word-display">
-                <li class="letter"></li>
-                <li class="letter"></li>
-                <li class="letter guessed">a</li>
-                <li class="letter"></li>
-                <li class="letter"></li>
-                <li class="letter"></li>
-                <li class="letter"></li>
-            </ul>
 
-            <!-- display of questions -->
-            <center><ul id="questionsList" style="padding: 15px; font-size: 20px; font-weight: bold;">
-                <!-- Questions will be added dynamically using JavaScript -->
-            </ul>
-            <input type="text" id="user-answer" placeholder="Type your answer here" onkeydown="checkEnter(event)">
+        <div class="main-center">
+            <div class="content">
+                <p>Stage _</p> 
+                <div class="user-input">
 
-            <!-- number of guesses -->
-            <h5 class="guesses-text" style="padding: 10px;">
-                Incorrect guesses:
-                <b class="guesses-count">0 / 3</b>
-            </h4></center>
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <button>Hint</button>
 
-            <!-- keyboard -->
-            <div class="keyboard">
-                <button>a</button> <button>b</button> <button>c</button> <button>d</button>
-                <button>e</button> <button>f</button> <button>g</button> <button>h</button>
-                <button>i</button> <button>j</button> <button>k</button> <button>l</button>
-                <button>m</button> <button>n</button> <button>o</button> <button>p</button>
-                <button>q</button> <button>r</button> <button>s</button> <button>t</button>
-                <button>u</button> <button>v</button> <button>w</button> <button>x</button>
-                <button>y</button> <button>z</button> 
-            </div>
+                </div>
 
-            <!-- difficulty buttons -->
-            <div class="difficulty-buttons">
-                <h3>Choose Difficulty</h3>
-                <button class="difficulty-button" onclick="selectDifficulty('easy')">Easy</button>
-                <button class="difficulty-button" onclick="selectDifficulty('medium')">Medium</button>
-                <button class="difficulty-button" onclick="selectDifficulty('hard')">Hard</button>
-            </div>
-
-            <!--button for hint-->
-            <div class="difficulty-buttons">
-                <h4>Hints</h4>
-                <button class="difficulty-buttons" onclick="isVowel()">Vowels</button>
+                <br>
                 
+                <div class="details">
+
+                    <p>Questions should show here</p>
+                    <br>
+                    <p>Guesses Remaining: 3</p>
+                    <br>
+                    <br>
+                    <div class="keyboard">
+
+                        <div class="row">
+                            <button class="keys">Q</button>
+                            <button class="keys">W</button>
+                            <button class="keys">E</button>
+                            <button class="keys">R</button>
+                            <button class="keys">T</button>
+                            <button class="keys">Y</button>
+                            <button class="keys">U</button>
+                            <button class="keys">I</button>
+                            <button class="keys">O</button>
+                            <button class="keys">P</button>
+                        </div>
+
+                        <div class="row">
+                            <button class="keys">A</button>
+                            <button class="keys">S</button>
+                            <button class="keys">D</button>
+                            <button class="keys">F</button>
+                            <button class="keys">G</button>
+                            <button class="keys">H</button>
+                            <button class="keys">J</button>
+                            <button class="keys">K</button>
+                            <button class="keys">L</button>
+                        </div>
+
+                        <div class="row">
+                            <button class="keys">Z</button>
+                            <button class="keys">X</button>
+                            <button class="keys">C</button>
+                            <button class="keys">V</button>
+                            <button class="keys">B</button>
+                            <button class="keys">N</button>
+                            <button class="keys">M</button>
+                        </div>
+
+                        <div class="row">
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+                    
             </div>
         </div>
-    </div>
 
-    <script src="hangaroo.js" defer></script>
-
-</body>
+    </body>
 </html>
